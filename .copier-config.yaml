@@ -5,8 +5,8 @@ author: Young Joon Lee
 build_and_release: true
 code_template_answers_file: .copier-hyfi-config.yaml
 code_template_source: ''
-codecov_graph_token: P414TXNSHY
-copyright_year: 2023
+codecov_graph_token: m7h7HnVI8T
+copyright_year: 2024
 documentaion_tool: jupyter-book
 documentation_url: https://gdelt-climaterisk.jeju.ai
 email: entelecheia@hotmail.com
