@@ -1,0 +1,6 @@
+_open_link_: False
+name: "GDELT Climate Risk"
+authors: "Young Joon Lee <entelecheia@hotmail.com>"
+description: "Tool for analyzing climate risk from GDELT"
+homepage: "https://gdelt-climaterisk.jeju.ai"
+license: "MIT"
