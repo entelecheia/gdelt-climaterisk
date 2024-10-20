@@ -1,0 +1,9 @@
+.copierignore
+.tasks-extra.toml
+CHANGELOG.md
+pyproject.toml
+src/gdelt-climaterisk/__cli__.py
+src/gdelt-climaterisk/_version.py
+src/gdelt-climaterisk/__init__.py
+tests/gdelt-climaterisk/test_cli.py
+.gitignore
