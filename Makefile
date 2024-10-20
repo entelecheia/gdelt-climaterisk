@@ -120,3 +120,49 @@ init-project: initialize remove-template ## initialize the project (Warning: do 
 
 reinit-project: install-copier ## reinitialize the project (Warning: this may overwrite existing files!)
 	@bash -c 'args=(); while IFS= read -r file; do args+=("--skip" "$$file"); done < .copierignore; copier copy --trust "$${args[@]}" --data 'code_template_source=gh:entelecheia/hyfi-template' --answers-file .copier-config.yaml gh:entelecheia/hyperfast-python-template .'
+
+##@ Docker
+
+symlink-global-docker-env: ## symlink global docker env file for local development
+	@DOCKERFILES_SHARE_DIR="$HOME/.local/share/dockerfiles" \
+	DOCKER_GLOBAL_ENV_FILENAME=".env.docker" \
+	DOCKER_GLOBAL_ENV_FILE="$${DOCKERFILES_SHARE_DIR}/$${DOCKER_GLOBAL_ENV_FILENAME}" \
+	[ -f "$${DOCKER_GLOBAL_ENV_FILE}" ] && ln -sf "$${DOCKER_GLOBAL_ENV_FILE}" .env.docker || echo "Global docker env file not found"
+
+docker-login: ## login to docker
+	@bash .docker/.docker-scripts/docker-compose.sh login
+
+docker-build: ## build the docker app image
+	@IMAGE_VARIANT=$${IMAGE_VARIANT:-"base"} \
+	DOCKER_PROJECT_ID=$${DOCKER_PROJECT_ID:-"default"} \
+	bash .docker/.docker-scripts/docker-compose.sh build
+
+docker-config: ## show the docker app config
+	@IMAGE_VARIANT=$${IMAGE_VARIANT:-"base"} \
+	DOCKER_PROJECT_ID=$${DOCKER_PROJECT_ID:-"default"} \
+	bash .docker/.docker-scripts/docker-compose.sh config
+
+docker-push: ## push the docker app image
+	@IMAGE_VARIANT=$${IMAGE_VARIANT:-"base"} \
+	DOCKER_PROJECT_ID=$${DOCKER_PROJECT_ID:-"default"} \
+	bash .docker/.docker-scripts/docker-compose.sh push
+
+docker-run: ## run the docker base image
+	@IMAGE_VARIANT=$${IMAGE_VARIANT:-"base"} \
+	DOCKER_PROJECT_ID=$${DOCKER_PROJECT_ID:-"default"} \
+	bash .docker/.docker-scripts/docker-compose.sh run
+
+docker-up: ## launch the docker app image
+	@IMAGE_VARIANT=$${IMAGE_VARIANT:-"base"} \
+	DOCKER_PROJECT_ID=$${DOCKER_PROJECT_ID:-"default"} \
+	bash .docker/.docker-scripts/docker-compose.sh up
+
+docker-up-detach: ## launch the docker app image in detached mode
+	@IMAGE_VARIANT=$${IMAGE_VARIANT:-"base"} \
+	DOCKER_PROJECT_ID=$${DOCKER_PROJECT_ID:-"default"} \
+	bash .docker/.docker-scripts/docker-compose.sh up --detach
+
+docker-tag-latest: ## tag the docker app image as latest
+	@IMAGE_VARIANT=$${IMAGE_VARIANT:-"base"} \
+	DOCKER_PROJECT_ID=$${DOCKER_PROJECT_ID:-"default"} \
+	bash .docker/.docker-scripts/docker-compose.sh tag
