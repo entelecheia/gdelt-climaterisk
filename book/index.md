@@ -1,13 +1,15 @@
-# GDELT Climate Risk
+# Home
 
-
+[![pypi-image]][pypi-url]
 [![version-image]][release-url]
 [![release-date-image]][release-url]
 [![license-image]][license-url]
-[![codecov][codecov-image]][codecov-url]
 [![jupyter-book-image]][docs-url]
+[![codecov][codecov-image]][codecov-url]
 
 <!-- Links: -->
+[hyperfast python template]: https://github.com/entelecheia/hyperfast-python-template
+
 [codecov-image]: https://codecov.io/gh/entelecheia/gdelt-climaterisk/branch/main/graph/badge.svg?token=m7h7HnVI8T
 [codecov-url]: https://codecov.io/gh/entelecheia/gdelt-climaterisk
 [pypi-image]: https://img.shields.io/pypi/v/gdelt-climaterisk
@@ -29,7 +31,7 @@ Tool for analyzing climate risk from GDELT
 
 - Documentation: [https://gdelt-climaterisk.jeju.ai][docs-url]
 - GitHub: [https://github.com/entelecheia/gdelt-climaterisk][repo-url]
-
+- PyPI: [https://pypi.org/project/gdelt-climaterisk][pypi-url]
 
 GDELT Climate Risk is a tool for analyzing and visualizing climate-related risk data from the GDELT (Global Database of Events, Language, and Tone) project, focusing on climate change impacts and associated risks.
 
@@ -44,3 +46,8 @@ Contributions are welcome! Please see the [contributing guidelines] for more inf
 ## License
 
 This project is released under the [MIT License][license-url].
+
+## Table of Contents
+
+```{tableofcontents}
+```
