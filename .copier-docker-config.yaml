@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier; do NOT edit manually
-_commit: v0.31.0
+_commit: v0.32.0
 _src_path: gh:entelecheia/hyperfast-docker-template
 app_dirname: gdelt-climaterisk
 app_install_root: /workspace
@@ -15,7 +15,7 @@ docker_container_uid: 9001
 docker_container_username: dev
 docker_image_variant_name: base
 docker_image_version_variable_name: IMAGE_VERSION
-docker_name_prefix: COP_DECODER
+docker_name_prefix: GDELT_CLIMATERISK
 docker_project_name: gdelt-climaterisk
 docker_registry: ghcr.io
 docker_run_command: zsh
@@ -38,6 +38,7 @@ project_description: GDELT Climate Risk is a tool for analyzing and visualizing 
     focusing on climate change impacts and associated risks.
 project_license: MIT
 project_short_description: Tool for analyzing climate risk from GDELT
+restart_always: false
 ssh_host_port: 2341
 ssh_port: 22
 use_deploy_workflows: true
