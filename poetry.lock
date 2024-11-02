@@ -976,6 +976,27 @@ test-full = ["adlfs", "aiohttp (!=4.0.0a0,!=4.0.0a1)", "cloudpickle", "dask", "d
 tqdm = ["tqdm"]
 
 [[package]]
+name = "gdelt"
+version = "0.1.14"
+description = "Python-based framework to access and analyze Global Database of Events, Language, and Tone (GDELT) 1.0 or 2.0 data in a Python Pandas or R dataframe"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "gdelt-0.1.14-py2.py3-none-any.whl", hash = "sha256:7f64d4d59a71c7e06a8b373f7d3c8b6100dc42e237de9f6b732e69a116d59690"},
+    {file = "gdelt-0.1.14.tar.gz", hash = "sha256:474cc92335a7fc956b1190d85a0f91cdb2e4053a4cbd18b853cb4551ccaac39f"},
+]
+
+[package.dependencies]
+numpy = ">=1.11.1"
+pandas = ">=0.23"
+python-dateutil = ">=2.8.2"
+requests = ">=2.31.0"
+
+[package.extras]
+geospatial = ["fiona (>=1.6)", "geopandas (>1.7)", "shapely (>=1.5)"]
+r = ["pyarrow"]
+
+[[package]]
 name = "gdown"
 version = "5.2.0"
 description = "Google Drive Public File/Folder Downloader"
@@ -3025,4 +3046,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.13"
-content-hash = "312a815186713cdaf7bdc44a2916d21375df22e68772fc543dbc1f95cfd31af6"
+content-hash = "443cf7c185a5386121717b3cc5014ee9fbeaf6a354f9dc378d245bff0671d9f4"
