@@ -58,16 +58,43 @@ extend-exclude = '''
 
 [tool.isort]
 profile = "black"
-skip = ['_version.py', 'node_modules', '_build', 'docs', 'tests', 'venv', '.copier-template', '.refs']
+skip = [
+  '_version.py',
+  'node_modules',
+  '_build',
+  'docs',
+  'tests',
+  'venv',
+  '.copier-template',
+  '.refs',
+]
 
 [tool.flake8]
 ignore = ['F401', 'E501', 'W503']
-exclude = ["node_modules", "_build", "docs", "tests", "venv", ".copier-template", ".refs"]
+exclude = [
+  "node_modules",
+  "_build",
+  "docs",
+  "tests",
+  "venv",
+  ".copier-template",
+  ".refs",
+]
 per-file-ignores = ['__init__.py:F401', '_version.py:W292']
 
 [tool.mypy]
 namespace_packages = true
-exclude = ["node_modules", "build", "_build", "dist", "docs", "tests", "venv", ".copier-template", ".refs"]
+exclude = [
+  "node_modules",
+  "build",
+  "_build",
+  "dist",
+  "docs",
+  "tests",
+  "venv",
+  ".copier-template",
+  ".refs",
+]
 # 3rd party import
 ignore_missing_imports = true
 # dynamic typing
@@ -118,7 +145,10 @@ build_command = "pip install poetry && poetry build --no-cache"
 
 # Version variables
 version_toml = ["pyproject.toml:tool.poetry.version"]
-version_variables = ["src/gclimaterisk/_version.py:__version__"]
+version_variables = [
+  "src/gclimaterisk/_version.py:__version__",
+  ".docker/docker.version:IMAGE_VERSION",
+]
 
 # Remote settings
 [tool.semantic_release.remote]
