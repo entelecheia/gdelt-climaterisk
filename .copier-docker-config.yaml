@@ -13,7 +13,7 @@ docker_apt_packages: ''
 docker_build_from: ghcr.io/entelecheia/devcon:latest-cuda-12.1.0-ubuntu22.04
 docker_container_uid: 9001
 docker_container_username: dev
-docker_image_variant_name: base
+docker_image_variant_name: dev
 docker_image_version_variable_name: IMAGE_VERSION
 docker_name_prefix: GDELT_CLIMATERISK
 docker_project_name: gdelt-climaterisk
