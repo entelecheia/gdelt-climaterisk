@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gdelt-climaterisk"
-version = "0.0.0"
+version = "0.1.0"
 description = "Tool for analyzing climate risk from GDELT"
 authors = ["Young Joon Lee <entelecheia@hotmail.com>"]
 license = "MIT"
