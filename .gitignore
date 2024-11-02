@@ -1,6 +1,7 @@
 # working directory
 workspace/
 tmp/
+.Trash-*
 
 # hypothesis: https://github.com/HypothesisWorks/hypothesis
 .hypothesis/

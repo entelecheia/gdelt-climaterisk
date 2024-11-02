@@ -24,7 +24,7 @@ else
     echo "Starting Jupyter Lab..."
     jupyter lab \
         --no-browser \
-        --notebook-dir="$WORKSPACE_ROOT" \
+        --notebook-dir="$APP_SRC_DIR" \
         --ServerApp.token="$JUPYTER_TOKEN" \
         --port="$JUPYTER_PORT" \
         --ip=0.0.0.0 \
