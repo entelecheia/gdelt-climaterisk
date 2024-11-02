@@ -101,7 +101,6 @@ exclude_lines = ['if __name__ == "__main__":']
 name = "cz_conventional_commits"
 tag_format = "v$version"
 
-
 [tool.semantic_release]
 # General settings
 tag_format = "v{version}"
