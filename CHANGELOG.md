@@ -1,5 +1,30 @@
 <!--next-version-placeholder-->
 
+## v0.2.0 (2024-11-02)
+
+### Chores
+
+* chore: update exclusion lists and add docker version variable in pyproject.toml ([`1f584f2`](https://github.com/entelecheia/gdelt-climaterisk/commit/1f584f2dad564ad46a06692816495437b61e19a1))
+
+* chore(gkg_data): add datetime import to download_gdelt_gkg function ([`85e49d3`](https://github.com/entelecheia/gdelt-climaterisk/commit/85e49d317aeec33b79e00f247c95f43ef58c530f))
+
+* chore: add pandas and gdelt dependencies to pyproject.toml ([`1d6e639`](https://github.com/entelecheia/gdelt-climaterisk/commit/1d6e6395c5aa12d53b3eabcfbea13d6c68931047))
+
+* chore: add .Trash-* to .gitignore to exclude trash files ([`3b1fd10`](https://github.com/entelecheia/gdelt-climaterisk/commit/3b1fd10740cb6689c53e96538c4ffee85cb45d72))
+
+* chore(docker): update Jupyter Lab notebook directory to use APP_SRC_DIR ([`fcadc80`](https://github.com/entelecheia/gdelt-climaterisk/commit/fcadc80fb12fb356652322fa85415eacc6334ad9))
+
+* chore(docker): change default image variant to dev ([`db9317d`](https://github.com/entelecheia/gdelt-climaterisk/commit/db9317d276a581e954b8dd1fd5bceea6830ebe19))
+
+### Features
+
+* feat: add GDELT GKG data download and analysis functions ([`b9a05a5`](https://github.com/entelecheia/gdelt-climaterisk/commit/b9a05a5fe14f25894237283003e1a64dc0c2611b))
+
+### Unknown
+
+* Merge pull request #8 from entelecheia/main ([`a074d68`](https://github.com/entelecheia/gdelt-climaterisk/commit/a074d6875986de815f82323b91fefcdf3112ebc5))
+
+
 ## v0.1.0 (2024-11-02)
 
 ### Bug Fixes
