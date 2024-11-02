@@ -1,6 +1,7 @@
+from datetime import datetime
+
 import gdelt
 import pandas as pd
-from datetime import datetime
 
 
 def download_gdelt_gkg(start_date, end_date, keywords=None, themes=None):
