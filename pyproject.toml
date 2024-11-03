@@ -72,7 +72,7 @@ skip = [
 ]
 
 [tool.flake8]
-ignore = ['F401', 'E501', 'W503']
+ignore = ['F401', 'E501', 'W503', 'E203']
 exclude = [
   "node_modules",
   "_build",
