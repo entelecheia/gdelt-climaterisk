@@ -1,5 +1,26 @@
 <!--next-version-placeholder-->
 
+## v0.3.0 (2024-11-03)
+
+### Features
+
+* feat: add Google Chrome and Playwright installation in Dockerfile.dev ([`2051460`](https://github.com/entelecheia/gdelt-climaterisk/commit/2051460dafc3ff6e75364e4f0e2d03505f3b09db))
+
+* feat: add crawl4ai and nest-asyncio dependencies in pyproject.toml ([`c342a94`](https://github.com/entelecheia/gdelt-climaterisk/commit/c342a94884fd6a9cbcc86b6baac4996303d5184f))
+
+### Refactoring
+
+* refactor: enhance download_gdelt_gkg function with input validation and error handling ([`f0b0f09`](https://github.com/entelecheia/gdelt-climaterisk/commit/f0b0f09fe53e552100be860dff2549e7d4b1d86a))
+
+### Unknown
+
+* Merge pull request #11 from entelecheia/main ([`ef0756a`](https://github.com/entelecheia/gdelt-climaterisk/commit/ef0756ae8da4407c399fff55171539d289a728be))
+
+* Merge pull request #9 from entelecheia/release
+
+Release ([`9f0e53a`](https://github.com/entelecheia/gdelt-climaterisk/commit/9f0e53a1501c42f9339223f44b7d3da56a286eed))
+
+
 ## v0.2.0 (2024-11-02)
 
 ### Chores
