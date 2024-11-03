@@ -1,10 +1,10 @@
-from datetime import datetime
+import json
 
 import gdelt
-import pandas as pd
+import requests
 
 
-def download_gdelt_gkg(start_date, end_date, keywords=None, themes=None):
+def download_gdelt_gkg(start_date: str, end_date: str, keywords=None, themes=None):
     """
     Download GDELT GKG data with filtering conditions
 
@@ -17,6 +17,18 @@ def download_gdelt_gkg(start_date, end_date, keywords=None, themes=None):
     Returns:
     - pandas DataFrame containing the filtered GKG data
     """
+    if not isinstance(start_date, str) or not isinstance(end_date, str):
+        raise ValueError("start_date and end_date must be strings in YYYYMMDD format")
+    if not (
+        start_date.isdigit()
+        and end_date.isdigit()
+        and len(start_date) == 8
+        and len(end_date) == 8
+    ):
+        raise ValueError("Dates must be in YYYYMMDD format")
+    if start_date > end_date:
+        raise ValueError("start_date must be before or equal to end_date")
+
     try:
         # Initialize GDELT (version 2)
         gd = gdelt.gdelt(version=2)
@@ -47,7 +59,7 @@ def download_gdelt_gkg(start_date, end_date, keywords=None, themes=None):
 
         return results
 
-    except Exception as e:
+    except (requests.RequestException, json.JSONDecodeError, ValueError) as e:
         print(f"Error downloading GDELT data: {str(e)}")
         return None
 
