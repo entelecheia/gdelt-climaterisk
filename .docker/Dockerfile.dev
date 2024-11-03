@@ -14,6 +14,15 @@ RUN apt-get update --fix-missing \
     locales locales-all  \
     python3-pip python3-venv python3-dev python3-setuptools python3-wheel \
     tzdata openssh-server \
+    # Chrome dependencies
+    fonts-liberation libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libcups2 \
+    libdbus-1-3 libdrm2 libgbm1 libgtk-3-0 libnspr4 libnss3 libxcomposite1 \
+    libxdamage1 libxfixes3 libxrandr2 libxshmfence1 xdg-utils \
+    && add-apt-repository ppa:deadsnakes/ppa -y \
+    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list' \
+    && apt-get update \
+    && apt-get -y install --no-install-recommends python3.9-venv python3.10-venv python3-pip google-chrome-stable \
     # Cleans up unnecessary packages to reduce image size
     && apt-get autoremove -y \
     && apt-get clean -y
@@ -37,6 +46,12 @@ ENV WORKSPACE_ROOT $ARG_WORKSPACE_ROOT
 # Sets up the workspace for the user
 RUN mkdir -p $WORKSPACE_ROOT/projects
 
+# Install Playwright and its dependencies
+RUN python3 -m venv "${APP_VIRTUAL_ENV}" \
+    && pip install playwright \
+    && playwright install \
+    && playwright install-deps
+
 # Sets the working directory to workspace root
 WORKDIR $WORKSPACE_ROOT
 # Copies scripts from host into the image
@@ -44,7 +59,7 @@ COPY ./.docker/scripts/ ./scripts/
 # Copy the app source code from host into the image
 RUN mkdir -p $APP_SRC_DIR
 COPY . ./$APP_DIRNAME/
-RUN python3 -m venv "${APP_VIRTUAL_ENV}"
+# RUN python3 -m venv "${APP_VIRTUAL_ENV}"
 
 # RUN pip install -r ./scripts/requirements-dev.txt
 
