@@ -24,7 +24,7 @@ pandas = ">=1.5.3,<=2.2.2"
 gdelt = "^0.1.14"
 crawl4ai = "^0.3.745"
 nest-asyncio = "^1.6.0"
-firecrawl-py = "^1.6.1"
+firecrawl-py = "^1.6.2"
 
 [tool.poetry.group.dev]
 optional = true
