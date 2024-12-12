@@ -821,13 +821,13 @@ typing = ["typing-extensions (>=4.12.2)"]
 
 [[package]]
 name = "firecrawl-py"
-version = "1.6.3"
+version = "1.6.4"
 description = "Python SDK for Firecrawl API"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "firecrawl_py-1.6.3-py3-none-any.whl", hash = "sha256:c561c6b3cb4dd6c499c1a5298b1cf7b38ae23f875ee897ae1141cff440e699c9"},
-    {file = "firecrawl_py-1.6.3.tar.gz", hash = "sha256:cb7d82a9a551b84c07f236368e2c8c274c27978ccb10ac91757e97fb6b581bd6"},
+    {file = "firecrawl_py-1.6.4-py3-none-any.whl", hash = "sha256:3b8be937f7f91d68c636d40188fe5de26808b0c9e6578a9ad10ef81595f2cd03"},
+    {file = "firecrawl_py-1.6.4.tar.gz", hash = "sha256:35422a518b37c4194d5e238776128d66e92c1e1c0832a10bebee3057dc65e59a"},
 ]
 
 [package.dependencies]
@@ -4199,4 +4199,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.13"
-content-hash = "a9ee29180cfad1cfbb6840763a223bd999d1804288a15e11e6c874318d091ff7"
+content-hash = "7c3ac8a6d00a7e0456e9b9e38be54acbd4116e37764e6033919d3df4e80adfcd"
