@@ -652,13 +652,13 @@ toml = ["tomli"]
 
 [[package]]
 name = "crawl4ai"
-version = "0.3.746"
+version = "0.4.23"
 description = "🔥🕷️ Crawl4AI: Open-source LLM Friendly Web Crawler & scraper"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "Crawl4AI-0.3.746-py3-none-any.whl", hash = "sha256:3411c031f31acd5a4cd30acc398585c94a202e717df97d6f0ff9ff3d30775994"},
-    {file = "crawl4ai-0.3.746.tar.gz", hash = "sha256:b10f0bfde1149a57ee8459ec7114c9d3c670b5c9669db2743468b4f646839585"},
+    {file = "Crawl4AI-0.4.23-py3-none-any.whl", hash = "sha256:c337494be9d0614591ec1fc891139bf7a013be1e2f173483a32aaf99b726c400"},
+    {file = "crawl4ai-0.4.23.tar.gz", hash = "sha256:193224c2b68ff707e3b311ef4a475b96e7d4a22a50acc003e55b7a54db270df6"},
 ]
 
 [package.dependencies]
@@ -4200,4 +4200,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.13"
-content-hash = "df8c35941ca945123976e75fe5724e932e5c775b395e822b62cea9d7edce3d45"
+content-hash = "fb900295152bf7b88a6faffb0780e31165f882997a904c1438482c3eb19887a8"
