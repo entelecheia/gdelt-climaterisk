@@ -731,13 +731,13 @@ toml = ["tomli"]
 
 [[package]]
 name = "crawl4ai"
-version = "0.4.247"
+version = "0.4.248"
 description = "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & scraper"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "Crawl4AI-0.4.247-py3-none-any.whl", hash = "sha256:c63f24c47832a7e0d3623eed591b85f901bcb4d6669117f751267eb941fc2086"},
-    {file = "crawl4ai-0.4.247.tar.gz", hash = "sha256:a464dbf61b0cd512bb3870690e68168c03dcd993f863363b8ac0ca3614565080"},
+    {file = "Crawl4AI-0.4.248-py3-none-any.whl", hash = "sha256:b98eed27d0215cfe69faa59e922b04e131c8683a07def08097075140ec71a549"},
+    {file = "crawl4ai-0.4.248.tar.gz", hash = "sha256:ae0da8d4bbde09a9985a9f5797ed351172adc82df1266cf55ef10526abf66e46"},
 ]
 
 [package.dependencies]
@@ -745,6 +745,9 @@ aiofiles = ">=24.1.0"
 aiosqlite = ">=0.20,<1.0"
 beautifulsoup4 = ">=4.12,<5.0"
 colorama = ">=0.4,<1.0"
+cssselect = ">=1.2.0"
+fake-useragent = ">=2.0.3"
+httpx = "0.27.2"
 litellm = ">=1.53.1"
 lxml = ">=5.3,<6.0"
 nltk = ">=3.9.1"
@@ -757,6 +760,7 @@ pyOpenSSL = ">=24.3.0"
 python-dotenv = ">=1.0,<2.0"
 rank-bm25 = ">=0.2,<1.0"
 requests = ">=2.26,<3.0"
+rich = ">=13.9.4"
 snowballstemmer = ">=2.2,<3.0"
 tf-playwright-stealth = ">=1.1.0"
 xxhash = ">=3.4,<4.0"
@@ -816,6 +820,17 @@ sdist = ["build"]
 ssh = ["bcrypt (>=3.1.5)"]
 test = ["certifi", "cryptography-vectors (==43.0.3)", "pretend", "pytest (>=6.2.0)", "pytest-benchmark", "pytest-cov", "pytest-xdist"]
 test-randomorder = ["pytest-randomly"]
+
+[[package]]
+name = "cssselect"
+version = "1.2.0"
+description = "cssselect parses CSS3 Selectors and translates them to XPath 1.0"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "cssselect-1.2.0-py2.py3-none-any.whl", hash = "sha256:da1885f0c10b60c03ed5eccbb6b68d6eff248d91976fcde348f395d54c9fd35e"},
+    {file = "cssselect-1.2.0.tar.gz", hash = "sha256:666b19839cfaddb9ce9d36bfe4c969132c647b92fc9088c4e23f786b30f1b3dc"},
+]
 
 [[package]]
 name = "cycler"
@@ -933,6 +948,20 @@ python-versions = ">=3.6"
 files = [
     {file = "fake_http_header-0.3.5-py3-none-any.whl", hash = "sha256:cd05f4bebf1b7e38b5f5c03d7fb820c0c17e87d9614fbee0afa39c32c7a2ad3c"},
 ]
+
+[[package]]
+name = "fake-useragent"
+version = "2.0.3"
+description = "Up-to-date simple useragent faker with real world database"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "fake_useragent-2.0.3-py3-none-any.whl", hash = "sha256:8bae50abb72c309a5b3ae2f01a0b82426613fd5c4e2a04dca9332399ec44daa1"},
+    {file = "fake_useragent-2.0.3.tar.gz", hash = "sha256:af86a26ef8229efece8fed529b4aeb5b73747d889b60f01cd477b6f301df46e6"},
+]
+
+[package.dependencies]
+importlib-resources = {version = ">=6.0", markers = "python_version < \"3.10\""}
 
 [[package]]
 name = "filelock"
@@ -1410,13 +1439,13 @@ trio = ["trio (>=0.22.0,<1.0)"]
 
 [[package]]
 name = "httpx"
-version = "0.28.0"
+version = "0.27.2"
 description = "The next generation HTTP client."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "httpx-0.28.0-py3-none-any.whl", hash = "sha256:dc0b419a0cfeb6e8b34e85167c0da2671206f5095f1baa9663d23bcfd6b535fc"},
-    {file = "httpx-0.28.0.tar.gz", hash = "sha256:0858d3bab51ba7e386637f22a61d8ccddaeec5f3fe4209da3a6168dbb91573e0"},
+    {file = "httpx-0.27.2-py3-none-any.whl", hash = "sha256:7bb2708e112d8fdd7829cd4243970f0c223274051cb35ee80c03301ee29a3df0"},
+    {file = "httpx-0.27.2.tar.gz", hash = "sha256:f7c2be1d2f3c3c3160d441802406b206c2b76f5947b11115e6df10c6c65e66c2"},
 ]
 
 [package.dependencies]
@@ -1424,6 +1453,7 @@ anyio = "*"
 certifi = "*"
 httpcore = "==1.*"
 idna = "*"
+sniffio = "*"
 
 [package.extras]
 brotli = ["brotli", "brotlicffi"]
@@ -4415,4 +4445,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.13"
-content-hash = "f28124e18b0f1471aeaea6d25069d90112cd3bb9a28741779f9acd842c8caf2c"
+content-hash = "b5fe8d2612ad526350defe6020bfe6bd00c9da27cc61b2ef9f5f3d0bf17b98d1"
